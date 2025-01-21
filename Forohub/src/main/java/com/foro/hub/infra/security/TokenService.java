@@ -25,7 +25,7 @@ public class TokenService {
 
     public String generarToken(LoginUser loginUser) {
         try {
-            Algorithm algorithm = Algorithm.HMAC256("meruru"); //cambiar a apiSecret
+            Algorithm algorithm = Algorithm.HMAC256(apiSecret);
             return JWT.create()
                     .withIssuer("forohub")
                     .withSubject(loginUser.getlogin())
@@ -46,7 +46,7 @@ public class TokenService {
         }
         DecodedJWT verifier = null;
         try {
-            Algorithm algorithm = Algorithm.HMAC256("meruru"); // validando firma
+            Algorithm algorithm = Algorithm.HMAC256(apiSecret); // validando firma
             verifier = JWT.require(algorithm)
                     .withIssuer("forohub")
                     .build()

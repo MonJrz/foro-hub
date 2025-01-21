@@ -49,7 +49,7 @@ El usuario puede responder a tópicos creados por otros usuarios.
 - Solución
 
 ### Usuarios
-Permite registrar y eliminar un usuario.
+Permite registrar un usuario.
 
 *Atributos*
 - ID
